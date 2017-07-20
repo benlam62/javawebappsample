@@ -20,7 +20,7 @@ node {
     def resourceGroup = 'javawebapp-bl2' 
     def webAppName = 'javawebapp-bl2'
     // login Azure
-    withCredentials([azureServicePrincipal('368b63e7-6be0-402e-b2c9-1f2b4a700eb8')]) {
+    withCredentials([azureServicePrincipal('e522eb25-3612-45b8-8248-586fe2e3eefe')]) {
       sh '''
         az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID
         az account set -s $AZURE_SUBSCRIPTION_ID
