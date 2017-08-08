@@ -13,7 +13,7 @@ public class CalculatorService {
     @Path("ping")
     @Produces(MediaType.TEXT_PLAIN)
     public String ping() {
-        return "Welcome to Java Web App v4 on Linux!!! This is updated!\n" + new Date().toString();
+        return "Welcome to Java Web App v5!!! This is updated!\n" + new Date().toString();
     }
 
     @GET
