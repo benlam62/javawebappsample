@@ -15,7 +15,7 @@ node {
   }
   
   stage('deploy') {
-    def webAppResourceGroup = 'linux-webapp'
+    def webAppResourceGroup = 'linux-webapp-dev'
     def webAppName = 'benlam-linux1'
     def acrName = 'benlamRegistry1'
     def imageName = 'calculator'
