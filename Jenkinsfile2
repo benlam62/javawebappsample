@@ -16,7 +16,8 @@ node {
   
   stage('deploy') {
     def webAppResourceGroup = 'linux-webapp'
-    def webAppName = 'benlam-linux1-dev'
+    def webAppName = 'benlam-linux1'
+    def webAppDeploymentSlot = 'dev'
     def acrName = 'benlamRegistry1'
     def imageName = 'calculator'
     // generate version, it's important to remove the trailing new line in git describe output
@@ -41,7 +42,7 @@ node {
       // push image
       image.push()
       // update web app docker settings
-      sh "az webapp config container set -g $webAppResourceGroup -n $webAppName -c $imageWithTag -r http://$loginServer -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET"
+      sh "az webapp config container set -g $webAppResourceGroup -n $webAppName -s $webAppDeploymentSlot -c $imageWithTag -r http://$loginServer -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET"
       // log out
       sh 'az logout'
       sh "docker logout $loginServer"
