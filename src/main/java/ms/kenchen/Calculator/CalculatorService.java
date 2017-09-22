@@ -14,7 +14,7 @@ public class CalculatorService {
     @Path("ping")
     @Produces(MediaType.TEXT_PLAIN)
     public String ping() {
-        return "Welcome to Java REST API on Container v7!\n" + new Date().toString();
+        return "Welcome to Java REST API on Container v8!\n" + new Date().toString();
     }
 
     @GET
