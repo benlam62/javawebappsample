@@ -15,8 +15,8 @@ node {
   }
   
   stage('deploy') {
-    def webAppResourceGroup = 'linux-webapp-dev'
-    def webAppName = 'benlam-linux1'
+    def webAppResourceGroup = 'linux-webapp'
+    def webAppName = 'benlam-linux1-dev'
     def acrName = 'benlamRegistry1'
     def imageName = 'calculator'
     // generate version, it's important to remove the trailing new line in git describe output
