@@ -25,7 +25,7 @@ public class CalculatorService {
     }
 
     @GET
-    @Path("sub")
+    @Path("sub")­
     @Produces(MediaType.APPLICATION_JSON)
     public CalculatorResponse Sub(@QueryParam("x") int x, @QueryParam("y") int y) {
         return new CalculatorResponse(x, y, x - y);
@@ -49,6 +49,6 @@ public class CalculatorService {
     @Path("max")
     @Produces(MediaType.APPLICATION_JSON)
     public CalculatorResponse Max(@QueryParam("x") int x, @QueryParam("y") int y) {
-        return new CalculatorResponse(x, y, Math.min(x, y));
+        return new CalculatorResponse(x, y, Math.max(x, y));
     }
 }
