@@ -14,7 +14,7 @@ public class CalculatorService {
     @Path("ping")
     @Produces(MediaType.TEXT_PLAIN)
     public String ping() {
-        return "Welcome to Java Web App v7!\n" + new Date().toString();
+        return "Welcome to Java Web App v8!\n" + new Date().toString();
     }
 
     @GET
@@ -49,6 +49,6 @@ public class CalculatorService {
     @Path("max")
     @Produces(MediaType.APPLICATION_JSON)
     public CalculatorResponse Max(@QueryParam("x") int x, @QueryParam("y") int y) {
-        return new CalculatorResponse(x, y, Math.min(x, y));
+        return new CalculatorResponse(x, y, Math.max(x, y));
     }
 }
